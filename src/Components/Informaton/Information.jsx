@@ -7,8 +7,8 @@ function Information() {
             <header>
                 <h1 className="font-bold text-5xl mb-6">Drop Us a <span className="text-green-400">Line</span></h1>
             </header>
-            <main>
-                <div className="grid grid-cols-1  md:grid-cols-2 gap-6">
+            <main className='px-4 bg-gray-100'>
+                <div className="grid grid-cols-1  md:grid-cols-2 gap-6 pt-3">
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Name*</label>
                         <input className="mt-4 block w-full   px-3 py-2 border border-gray-300 rounded-md shadow-md" type="text" placeholder="Enter Your Name" />
@@ -64,20 +64,20 @@ function Information() {
                     </div>
                 </div>
                 {/* add attachment file */}
-                <div className="mt-8  ">
+                <div className=" py-6 ">
                     <label className="block text-sm font-medium">Add Attachment <span className="text-neutral-400">(Optional)</span></label>
 
                     {/* <div className="mt-4 flex items-center space-x-2 border rounded-lg p-2 ">
                         <input type="text" className="border rounded-md mt-4 w-full shadow-md px-3 py-2 w-full text-gray-400 bg-transparent outline-none"
                             placeholder="(a brief, idea, branding guideline, old design,...)"
                         /> */}
-                    <div className="flex items-center space-x-2 border rounded-lg p-2 mt-4">
+                    <div className="flex items-center space-x-2 border rounded-lg p-2 mt-4 border border-outline bg-white">
                         <input
                             type="text"
                             placeholder="(a brief, idea, branding guideline, old design,...)"
-                            className="w-full text-gray-400 bg-transparent outline-none"
+                            className="w-full  rounded-md  w-full mt-1 px-3 py-2"
                         />
-                        <div>
+                        <div >
                             <input
                                 type="file"
                                 //   ref={fileInputRef}
@@ -86,8 +86,8 @@ function Information() {
                             // accept="application/pdf, image/*"
                             />
 
-                            <button className="flex items-center justify-center border rounded-md shadow-md min-w-44 bg-emerald-400  px-4 py-2 rounded-lg text-sm">
-                                <GrAttachment className='mr-1 ' />
+                            <button className="flex items-center justify-center border rounded-md shadow-md bg-emerald-400 px-3 mt-1 py-2 text-sm  min-w-40  text-white">
+                                <GrAttachment className='mr-1' />
                                 Add File (5Mb)
                             </button>
                         </div>
@@ -96,17 +96,13 @@ function Information() {
 
 
                 </div>
-                {/* submit button */}
-                <div className="mt-8">
-                    <button className="flex justify-center items-center border rounded-md shadow-md px-3 py-2 bg-blue-800 text-white text-sm font-medium">Send Query
-                        <VscSend className='ml-1'/>
-                    </button>
-                </div>
-
-
-
-
             </main>
+            {/* submit button */}
+            <div className="mt-8">
+                <button className="flex justify-center items-center border rounded-md shadow-md px-3 py-2 bg-blue-800 text-white text-sm font-medium">Send Query
+                    <VscSend className='ml-1' />
+                </button>
+            </div>
         </section>
     )
 }
